@@ -1,0 +1,87 @@
+    .    _____
+   /\\  |  _ _)_ __ _ ___ _ 
+  ( ( ) | |_ _|	'_ |_ _ _ _| 
+   \\/  |  _ _| |_)|  | |
+	'   | |   | .__|  | |
+========|_|===|_|=====|_|
+:: RanText ::  (v1.0 RELEASE)
+
+
+
+
+public static final String ANSI_RED = "\u001B[31m";
+
+    public static void main(String[] args) {
+        String[] work = {"Tiến", "Bin", "Long"};
+        int index = new Random().nextInt(work.length);
+        JOptionPane.showMessageDialog(null, "Chúc mừng chú " + work[index] + " :v");
+        System.out.println("Chúc mừng chú " + ANSI_RED + work[index] + " :v");
+    }
+	
+	function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var res = str.replace(/\//g, "-");
+  var reverse = Array.from(res).reverse().join('');
+  document.getElementById("demo").innerHTML = reverse;
+  
+};
+
+this.parentNode, 
+
+
+var table = document.getElementById("myTable");
+		var lb = document.getElementById("staticBackdropLabel");
+		var myF = document.getElementById("myForm");
+		var id = document.getElementById("id");
+		var id1 = document.getElementById("id1");
+		var f = document.getElementsByClassName("form-control");
+		var r1 = document.getElementById("radioR1");
+		var r2 = document.getElementById("radioR2");
+		var button = document.getElementById("edit");
+
+		function getData(r, departId) {
+			lb.innerHTML = "Sửa nhân viên";
+			myF.action = "staff/update.html";
+			id.setAttribute("readonly", true);
+
+			f[4].value = table.rows[r.parentNode.rowIndex].cells[0].innerHTML;
+			document.getElementById('deIP').value=departId;
+			f[1].value = table.rows[r.parentNode.rowIndex].cells[1].innerHTML;
+			f[3].value = table.rows[r.parentNode.rowIndex].cells[2].innerHTML;
+
+			if (table.rows[r.parentNode.rowIndex].cells[3].innerHTML == "Nam") {
+				r1.checked = true;
+			} else {
+				r2.checked = true;
+			}
+
+			var str = table.rows[r.parentNode.rowIndex].cells[4].innerHTML;
+			var sp = str.split("/")[0];
+			var sp1 = str.split("/")[1];
+			var sp2 = str.split("/")[2];
+			f[5].value = sp2 + "-" + sp1 + "-" + sp;
+
+			f[6].value = table.rows[r.parentNode.rowIndex].cells[5].innerHTML;
+			f[7].value = table.rows[r.parentNode.rowIndex].cells[6].innerHTML;
+			f[8].value = table.rows[r.parentNode.rowIndex].cells[7].innerHTML;
+			f[9].value = table.rows[r.parentNode.rowIndex].cells[8].innerHTML;
+			button.textContent = "Sửa";
+		};
+
+		function resetData() {
+			lb.innerHTML = "Thêm nhân viên";
+			myF.action = "staff/insert.html";
+			id.removeAttribute("readonly");
+			f[4].value = "";
+			f[1].value = "";
+			f[3].value = "";
+			r1.checked = true;
+			r2.checked = false;
+			f[5].value = "";
+			f[6].value = "";
+			f[7].value = "";
+			f[8].value = "";
+			f[9].value = "";
+			button.textContent = "Thêm";
+		}
+	</script>
